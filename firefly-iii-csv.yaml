@@ -34,7 +34,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: fireflyiii/csv-importer:version-2.5.0
+      - image: fireflyiii/csv-importer:version-2.6.0
         name: firefly-iii-csv
         env:
         - name: FIREFLY_III_ACCESS_TOKEN
@@ -43,7 +43,10 @@ spec:
               name: firefly-iii-secrets
               key: access_token
         - name: FIREFLY_III_URL
-          value: "http://firefly-iii:8080"
+          valueFrom:
+            secretKeyRef:
+              name: firefly-iii-secrets
+              key: external_app_url
         - name: TRUSTED_PROXIES
           value: "**"
         ports:
