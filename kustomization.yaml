@@ -6,6 +6,6 @@ secretGenerator:
 - name: firefly-iii-secrets
   literals:
   - external_app_url="http://firefly-iii:8080"
-  - db_password=CHANGEMECHANGEME
-  - app_key=CHANGEMECHANGEMECHANGEMECHANGEME
+  - db_password=password
+  - app_key=THISISANEW32DIGITAPPKEYITHINKYES
   - access_token=CHANGEMECHANGEMECHANGEME...
